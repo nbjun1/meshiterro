@@ -6,6 +6,7 @@ class PostImagesController < ApplicationController
 
   #　投稿データの保存
   def create
+    #byebug
     @post_image = PostImage.new(post_image_params)
     @post_image.user_id = current_user.id
     @post_image.save
@@ -13,6 +14,8 @@ class PostImagesController < ApplicationController
   end
 
   def index
+    @post_image = PostImage.all
+    @post_image = PostImage.new
   end
 
   def show
