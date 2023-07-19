@@ -19,6 +19,7 @@ class PostImagesController < ApplicationController
   end
 
   def show
+    @post_image = PostImage.where(id: params[:id])
   end
 
   # 投稿データのストロングパラメータ
