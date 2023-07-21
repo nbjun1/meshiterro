@@ -24,6 +24,7 @@ class PostImagesController < ApplicationController
     #byebug
     @post_image = PostImage.where(id: params[:id])
     @post_image = post_image.id
+    @post_comment = PostComment.new
   end
 
   # 投稿データのストロングパラメータ
